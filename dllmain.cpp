@@ -317,8 +317,8 @@ namespace sl
 		virtual bool ShaderEditor_HasStats(int langID, int editorID) { return 0; }
 
 		// code editor
-		virtual void CodeEditor_SaveItem(const char* src, int srcLen, int id) {}
-		virtual void CodeEditor_CloseItem(int id) {}
+		virtual void CodeEditor_SaveItem(const char* src, int srcLen, const char* id) {}
+		virtual void CodeEditor_CloseItem(const char* id) {}
 		virtual bool LanguageDefinition_Exists(int id) { return true; }
 		virtual int LanguageDefinition_GetKeywordCount(int id)
 		{
@@ -580,7 +580,7 @@ extern "C" {
 		delete ptr;
 	}
 	FEXPORT int GetPluginAPIVersion() {
-		return 1;
+		return 3;
 	}
 	FEXPORT int GetPluginVersion() {
 		return 1;

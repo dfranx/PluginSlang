@@ -17,4 +17,5 @@ Open `.sln` and press the build button.
 
 ## How to install
 Minimum requirements: SHADERed v1.3.5
+
 Copy the .dll file to `plugins/Slang` folder in the SHADERed's installation directory.

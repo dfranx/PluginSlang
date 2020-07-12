@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<project version="2">
+	<pipeline>
+		<pass name="SPass" type="shader" active="true">
+			<shader type="vs" path="shaders\SimpleVS.slang" entry="main" />
+			<shader type="ps" path="shaders\SimplePS.slang" entry="main" />
+			<inputlayout>
+				<item value="Position" semantic="POSITION" />
+				<item value="Normal" semantic="NORMAL" />
+				<item value="Texcoord" semantic="TEXCOORD0" />
+			</inputlayout>
+			<rendertexture />
+			<items>
+				<item name="Box" type="geometry">
+					<type>Cube</type>
+					<width>1</width>
+					<height>1</height>
+					<depth>1</depth>
+					<topology>TriangleList</topology>
+				</item>
+			</items>
+			<itemvalues />
+			<variables>
+				<variable type="float4x4" name="matVP" system="ViewProjection" />
+				<variable type="float4x4" name="matGeo" system="GeometryTransform" />
+				<variable type="float" name="uMultiplier">
+					<row>
+						<value>1.41999996</value>
+					</row>
+				</variable>
+			</variables>
+			<macros />
+		</pass>
+	</pipeline>
+	<objects />
+	<cameras />
+	<settings>
+		<entry type="property" name="SPass" item="pipe" />
+		<entry type="file" name="SPass" shader="vs" />
+		<entry type="file" name="SPass" shader="ps" />
+		<entry type="pinned" name="uMultiplier" owner="SPass" />
+		<entry type="camera" fp="false">
+			<distance>5</distance>
+			<pitch>46</pitch>
+			<yaw>130</yaw>
+			<roll>360</roll>
+		</entry>
+		<entry type="clearcolor" r="0" g="0" b="0" a="1" />
+		<entry type="usealpha" val="false" />
+		<entry type="ipaths">
+			<path>..\..\slang</path>
+		</entry>
+	</settings>
+	<plugindata />
+</project>

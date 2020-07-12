@@ -2,3 +2,5 @@
 *.user
 copy.bat
 x64
+.vs
+Release
